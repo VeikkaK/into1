@@ -8,10 +8,14 @@ const cors = require('cors');
 const bookRouter = require('./routes/book');
 const borrowerRouter = require('./routes/borrower');
 const userRouter = require('./routes/user');
+const opiskelijaRouter = require('./routes/opiskelija');
+const arviointiRouter = require('./routes/arviointi');
+const opintojaksoRouter = require('./routes/opintojakso');
 const basicAuth = require('express-basic-auth');
 
 
 var app = express();
+
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -24,5 +28,8 @@ app.use(cors());
 app.use('/book', bookRouter);
 app.use('/borrower', borrowerRouter);
 app.use('/user', userRouter);
+app.use('/opiskelija', opiskelijaRouter);
+app.use('/arviointi', arviointiRouter);
+app.use('/opintojakso', arviointiRouter);
 
 module.exports = app;

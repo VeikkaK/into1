@@ -3,6 +3,6 @@ const connection = mysql.createPool({
   host: 'localhost',
   user: 'netuser',
   password: 'netpass',
-  database: 'netdb'
+  database: 'test_db2'
 });
 module.exports = connection;
