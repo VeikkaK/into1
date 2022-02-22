@@ -9,8 +9,8 @@ const arviointi = {
   },
   add: function(arviointi, callback) {
     return db.query(
-      'insert into arviointi (idArviointi,Päivämäärä,Arvosana,idOpintojakso,idOpiskelija) values(?,?,?,?)',
-      [arviointi.Etunimi, arviointi.Sukunimi, arviointi.Osoite, arviointinumero],
+      'insert into arviointi (idArviointi,Päivämäärä,Arvosana,idOpintojakso,idOpiskelija) values(?,?,?,?,?)',
+      [arviointi.idArviointi, arviointi.Päivämäärä, arviointi.Arvosana, arviointi.idOpintojakso, arviointi.idOpiskelija],
       callback
     );
   },

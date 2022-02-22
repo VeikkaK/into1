@@ -2,9 +2,6 @@ const express = require('express');
 const router = express.Router();
 const user = require('../models/user_model');
 
-
-
-
 router.get('/:id?',
  function(request, response) {
   if (request.params.id) {

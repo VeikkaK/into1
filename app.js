@@ -30,6 +30,6 @@ app.use('/borrower', borrowerRouter);
 app.use('/user', userRouter);
 app.use('/opiskelija', opiskelijaRouter);
 app.use('/arviointi', arviointiRouter);
-app.use('/opintojakso', arviointiRouter);
+app.use('/opintojakso', opintojaksoRouter);
 
 module.exports = app;
