@@ -10,7 +10,7 @@ const opintojakso = {
   add: function(opintojakso, callback) {
     return db.query(
       'insert into opintojakso (idOpintojakso,Nimi,Koodi,Laajuus) values(?,?,?,?)',
-      [opintojakso.Etunimi, opintojakso.Sukunimi, opintojakso.Osoite, opintojaksonumero],
+      [opintojakso.idOpintojakso, opintojakso.Nimi, opintojakso.Koodi, opintojakso.Laajuus],
       callback
     );
   },
